@@ -1,0 +1,2 @@
+rootProject.name = "to_do_list_DIO"
+include ':app'

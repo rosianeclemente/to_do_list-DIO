@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">to_do_list_DIO</string>
+    <string name="tarefas">Tarefas</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="criar_tarefa">Criar Tarefa</string>
+    <string name="horas">Horas</string>
+    <string name="data">Data</string>
+    <string name="titulo">Titulo</string>
+    <string name="nova_tarefa">Nova Tarefa</string>
+    <string name="editar">editar</string>
+    <string name="delete">Delete</string>
+</resources>
