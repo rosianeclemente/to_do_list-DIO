@@ -11,28 +11,45 @@
         app:title="@string/criar_tarefa"
         app:navigationIcon="@drawable/ic_baseline_navigate_before_24"/>
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="32dp"
-        android:id="@+id/guide_start"/>
+        />
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_end="32dp"
-        android:id="@+id/guide_end"/>
+        />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_title"
         android:layout_width="0dp"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@+id/guide_start"
         app:layout_constraintEnd_toEndOf="@+id/guide_end"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_marginTop="16dp"
-        android:layout_height="wrap_content"
         android:hint="@string/titulo"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/guide_start"
+        app:layout_constraintEnd_toEndOf="@+id/guide_end"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="16dp"
+        android:hint="@string/descricao"
+        app:layout_constraintTop_toBottomOf="@+id/til_title">
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -48,7 +65,7 @@
         android:hint="@string/data"
         android:layout_marginEnd="16dp"
         app:startIconDrawable="@drawable/ic_baseline_calendar_today_24"
-        app:layout_constraintTop_toBottomOf="@+id/til_title"
+        app:layout_constraintTop_toBottomOf="@+id/til_description"
         app:layout_constraintStart_toStartOf="@+id/guide_start"
         app:layout_constraintEnd_toStartOf="@+id/til_hora">
         <com.google.android.material.textfield.TextInputEditText

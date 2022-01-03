@@ -11,10 +11,10 @@
         android:text="@string/tarefas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_margin="16dp"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:textColor="@color/black"/>
 
     <include android:id="@+id/image" layout="@layout/empty_style" />

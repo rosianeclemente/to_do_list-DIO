@@ -16,10 +16,11 @@ import java.sql.Time
 import java.util.*
 
 class AddTaskActivity: AppCompatActivity() {
-    private val binding by lazy { ActivityAddTaskBinding.inflate(layoutInflater)}
+    private lateinit var binding:  ActivityAddTaskBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityAddTaskBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 //        if(intent.hasExtra(TASK_ID)){
