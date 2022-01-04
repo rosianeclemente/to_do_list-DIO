@@ -53,12 +53,9 @@ class TaskListAdapter: androidx.recyclerview.widget.ListAdapter<Task, TaskListAd
     }
 }
 class DiffCallback: DiffUtil.ItemCallback<Task>(){
-    override fun areItemsTheSame(oldItem: Task, newItem: Task): Boolean {
-        TODO("Not yet implemented")
-    }
+    override fun areItemsTheSame(oldItem: Task, newItem: Task) = oldItem == newItem
 
-    override fun areContentsTheSame(oldItem: Task, newItem: Task): Boolean {
-        TODO("Not yet implemented")
-    }
+
+    override fun areContentsTheSame(oldItem: Task, newItem: Task) = oldItem.id == newItem.id
 
 }

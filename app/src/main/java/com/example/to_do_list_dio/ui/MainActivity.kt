@@ -1,5 +1,6 @@
 package com.example.to_do_list_dio.ui
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,16 +13,15 @@ import com.example.to_do_list_dio.ui.AddTaskActivity.Companion.TASK_ID
 class MainActivity : AppCompatActivity() {
 
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater)}
-
     private val adapter by lazy { TaskListAdapter()}
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-
         binding.tvTask.adapter = adapter
-
-
+        
         insertListeners()
+        updateList()
     }
 
     private fun insertListeners() {
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if(requestCode == CREATE_NEW_TASK && resultCode == RESULT_OK) updateList()
+        if(requestCode == CREATE_NEW_TASK && resultCode == Activity.RESULT_OK) updateList()
 
 
     }
