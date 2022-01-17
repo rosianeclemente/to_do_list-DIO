@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.to_do_list_dio.databinding.ActivityMainBinding
 import com.example.to_do_list_dio.datasource.TaskDataSource
 import com.example.to_do_list_dio.ui.AddTaskActivity.Companion.TASK_ID
@@ -14,16 +16,23 @@ class MainActivity : AppCompatActivity() {
 
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater)}
     private val adapter by lazy { TaskListAdapter()}
+    lateinit var tvTask: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         binding.tvTask.adapter = adapter
-        
+        iniciaView()
         insertListeners()
         updateList()
     }
 
+    private fun iniciaView(){
+        tvTask = binding.tvTask
+        tvTask.adapter = adapter
+        tvTask.layoutManager = GridLayoutManager(this, 2)
+
+    }
     private fun insertListeners() {
         binding.floButton.setOnClickListener{
 
