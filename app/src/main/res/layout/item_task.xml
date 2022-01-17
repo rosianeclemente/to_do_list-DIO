@@ -15,7 +15,7 @@
         android:checkable="true"
         android:clickable="true"
         android:focusable="true"
-        app:cardCornerRadius="8dp"
+        app:cardCornerRadius="3dp"
         app:cardElevation="4dp"
         app:cardBackgroundColor="#BBE1E6"
         app:layout_constraintDimensionRatio="50:70"
@@ -31,13 +31,11 @@
                 android:id="@+id/icon_more"
                 android:layout_width="30sp"
                 android:layout_height="30sp"
-                android:layout_margin="20dp"
                 android:src="@drawable/ic_baseline_more_vert_24"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.981"
-
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintRight_toRightOf="@id/tv_title"
+                app:layout_constraintStart_toStartOf="@id/tv_title"
                 tools:ignore="MissingConstraints" />
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_title"
