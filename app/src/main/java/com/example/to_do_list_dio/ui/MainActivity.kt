@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun insertListeners() {
         binding.floButton.setOnClickListener{
+
             startActivityForResult(Intent(this, AddTaskActivity::class.java), CREATE_NEW_TASK)
         }
         adapter.listenerEdit = {
@@ -47,11 +48,12 @@ class MainActivity : AppCompatActivity() {
     }
     private  fun updateList(){
        val list= TaskDataSource.getList()
-        if(list.isEmpty()){
-            binding.image.emptyState.visibility = View.VISIBLE
-        }else{
-            View.GONE
-        }
+
+            binding.imageEmpty.emptyState.visibility = if (list.isEmpty()){
+                View.VISIBLE
+            }else{
+                View.GONE
+            }
         adapter.submitList(list)
 
     }

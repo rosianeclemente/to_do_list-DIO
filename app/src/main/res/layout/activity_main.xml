@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:textColor="@color/black"/>
 
-    <include android:id="@+id/image" layout="@layout/empty_style" />
+    <include android:id="@+id/imageEmpty" layout="@layout/empty_style" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/tv_task"
